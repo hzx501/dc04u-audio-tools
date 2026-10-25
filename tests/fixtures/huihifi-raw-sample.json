@@ -1,0 +1,126 @@
+{
+  "code": 0,
+  "desc": "synthetic test fixture",
+  "synthetic": true,
+  "data": {
+    "uuid": "00000000-0000-4000-8000-000000000001",
+    "title": "Synthetic fixture device — not a real product",
+    "category": "EARBUDS",
+    "brand": {
+      "uuid": "00000000-0000-4000-8000-000000000002",
+      "title": "Synthetic example brand"
+    },
+    "rawFrDataList": [
+      {
+        "group": "Synthetic mode A",
+        "desc": "Pure mathematical fixture; not measured",
+        "name": "Synthetic mode A response",
+        "dataSet": [
+          [
+            "Freq(Hz)",
+            "SPL(dB)"
+          ],
+          [
+            "20",
+            "0.196518"
+          ],
+          [
+            "50",
+            "1.149399"
+          ],
+          [
+            "100",
+            "1.952526"
+          ],
+          [
+            "200",
+            "1.656264"
+          ],
+          [
+            "500",
+            "0.458099"
+          ],
+          [
+            "1000",
+            "0"
+          ],
+          [
+            "2000",
+            "-0.451276"
+          ],
+          [
+            "4000",
+            "-0.999723"
+          ],
+          [
+            "8000",
+            "-0.457828"
+          ],
+          [
+            "12000",
+            "-0.140495"
+          ],
+          [
+            "20000",
+            "-0.014817"
+          ]
+        ]
+      },
+      {
+        "group": "Synthetic mode B",
+        "desc": "Pure mathematical fixture; not measured",
+        "name": "Synthetic mode B response",
+        "dataSet": [
+          [
+            "Freq(Hz)",
+            "SPL(dB)"
+          ],
+          [
+            "20",
+            "1.196518"
+          ],
+          [
+            "50",
+            "2.149399"
+          ],
+          [
+            "100",
+            "2.952526"
+          ],
+          [
+            "200",
+            "2.656264"
+          ],
+          [
+            "500",
+            "1.458099"
+          ],
+          [
+            "1000",
+            "1"
+          ],
+          [
+            "2000",
+            "0.548724"
+          ],
+          [
+            "4000",
+            "0.000277"
+          ],
+          [
+            "8000",
+            "0.542172"
+          ],
+          [
+            "12000",
+            "0.859505"
+          ],
+          [
+            "20000",
+            "0.985183"
+          ]
+        ]
+      }
+    ]
+  }
+}
