@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "DC04U 高级 EQ 与跳变保护",
+  "version": "1.1.3",
+  "description": "DC04U 网页高级 PEQ、公开频响曲线与目标拟合；手动确认后写入，拦截超过30档的向上音量跳变。",
+  "minimum_chrome_version": "119",
+  "action": {
+    "default_title": "DC04U 跳变保护 · 检查本页状态",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://devices.ibasso.cn/*"
+      ],
+      "js": [
+        "guard-core.js",
+        "main.js",
+        "eq-device.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true,
+      "match_origin_as_fallback": true
+    },
+    {
+      "matches": [
+        "https://devices.ibasso.cn/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED",
+      "all_frames": true,
+      "match_origin_as_fallback": true
+    },
+    {
+      "matches": [
+        "https://devices.ibasso.cn/*"
+      ],
+      "js": [
+        "eq-math.js",
+        "data/curves.js",
+        "data/huihifi-catalog.js",
+        "eq-library.js",
+        "eq-ui.js"
+      ],
+      "run_at": "document_idle",
+      "world": "ISOLATED"
+    }
+  ]
+}

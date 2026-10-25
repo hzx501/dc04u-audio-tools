@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DC04U 高级 EQ · 离线预览</title>
+  <style>
+    *{box-sizing:border-box}
+    html{height:100%}
+    body{height:100%;margin:0;overflow:hidden;background:#10141c;color:#fff;font:14px -apple-system,BlinkMacSystemFont,sans-serif}
+    #app{height:100dvh;min-height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+    /* Match the official viewport-locked ancestry, including its minimum
+       desktop width. The advanced UI must supply its own scrolling area. */
+    .dc04u-page{height:100dvh;min-height:100dvh;min-width:1200px;display:flex;flex-direction:column;overflow:hidden;background:#10141c}
+    .dc04u-nav{position:sticky;top:0;z-index:100;height:64px;flex:0 0 64px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 28px;background:#151c27;border-bottom:1px solid #303746}
+    .preview-logo{flex:0 0 auto;white-space:nowrap}
+    .nav-tabs{display:flex;align-items:center;gap:12px;min-width:0}
+    .nav-tabs button{flex:0 0 auto;white-space:nowrap;border:0;background:transparent;color:#c1cbdc;cursor:pointer;font:inherit;padding:9px 12px}
+    .preview-note{color:#93a3bc;font-size:12px;white-space:nowrap}
+    .page-scroll{flex:0 0 auto;height:calc(100dvh - 64px);overflow-y:auto;overflow-x:hidden;padding-bottom:clamp(20px,3dvh,40px);overscroll-behavior-y:contain}
+    .page-scroll--locked{overflow-y:hidden;padding-bottom:0}
+    .page-content--panel{width:100%;max-width:1440px;display:flex;flex-direction:column;min-height:calc(100dvh - 64px);margin:0 auto}
+    .preview-intro{padding:50px 28px;text-align:center;color:#a3b1c8}
+    .preview-intro h1{margin:0 0 18px;color:#e6ecf6;font-size:25px}
+    .preview-intro p{margin:12px 0;line-height:1.7}
+    a{color:#c5dda7}
+    /* Keep the preview entry reachable on a small test viewport without
+       weakening the simulated page's original 1200px minimum width. */
+    @media(max-width:1100px){
+      .dc04u-nav{width:100%;max-width:100vw;justify-content:flex-start;gap:12px;padding:0 14px}
+      .nav-tabs{flex:1 1 auto;overflow-x:auto;overscroll-behavior-x:contain}
+      .preview-note{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <main class="dc04u-page" data-v-3774413b>
+      <header class="dc04u-nav" data-v-3774413b>
+        <strong class="preview-logo">DC04U</strong>
+        <nav class="nav-tabs" role="tablist" data-v-3774413b>
+          <button type="button" class="nav-tab" role="tab">离线预览</button>
+        </nav>
+        <span class="preview-note">本页没有设备适配器，不会写入耳机</span>
+      </header>
+      <div class="page-scroll page-scroll--locked" data-v-3774413b>
+        <section class="page-content--panel" data-v-3774413b>
+          <div class="preview-intro">
+            <h1>高级 EQ 离线预览</h1>
+            <p>点击导航栏的「高级 EQ」，体验曲线检索、拖动编辑与拟合。</p>
+            <p>本页不连接设备。编辑、导入和拟合都只更新本机草稿。</p>
+            <p>实际使用地址：<a href="https://devices.ibasso.cn/#/device/DC04U">DC04U 官网控制台</a></p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script>if(!location.hash)location.hash='/device/DC04U';</script>
+  <script src="eq-math.js"></script>
+  <script src="data/curves.js"></script>
+  <script src="data/huihifi-catalog.js"></script>
+  <script src="eq-library.js"></script>
+  <script src="eq-ui.js"></script>
+</body>
+</html>
